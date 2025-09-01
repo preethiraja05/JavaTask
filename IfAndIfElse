@@ -1,0 +1,88 @@
+package dailytask;
+public class IfElseIf {
+	public static void main(String[] args) {
+		int num=5;
+		int number=9;
+		if(num>0)
+		{
+			System.out.println("positive number");
+		}
+		if(num<=0)
+		{
+			System.out.println("negative number");
+		}
+		// if-else
+		if(number>0)
+		{
+			System.out.println("number is postive");
+		} else
+		{
+			System.out.println("number pis negative");
+		}
+		// leap year  if
+		int year=2024;
+		if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+		{
+			System.out.println("leap year");
+		}
+		
+		// leap year for else if
+		int years=2023;
+		if ((years % 400 == 0) || (years % 4 == 0 && years % 100 != 0))
+		{
+			System.out.println("leap year");
+		}
+		else
+		{
+			System.out.println("not a leap year");
+		}
+		
+		// odd or even for if
+		int value=8;
+		 if (value % 2 == 0) {
+	            System.out.println("Even number ");
+	        }
+		 // odd or even for ifelse
+	       
+	      if (value % 2 == 0) {
+	            System.out.println("Even number ");
+	        } 
+	      else 
+	      {
+	            System.out.println("Odd number");
+	        }
+	      
+	      // prime number if
+	      if (num == 2 || num == 3 || num == 5 || num == 7 || num == 11) {
+	            System.out.println("Prime number");
+	        }
+	        if (!(num == 2 || num == 3 || num == 5 || num == 7 || num == 11)) {
+	            System.out.println("Not a prime number ");
+	        }
+
+	        if (num == 2 || num == 3 || num == 5 || num == 7 || num == 11) {
+	            System.out.println("Prime number ");
+	        } else {
+	            System.out.println("Not a prime number");
+	        }
+
+	        // 10 to 1
+	        int i = 10;
+
+	        if (i == 10) {System.out.println(i--);}
+	        if (i == 9) {System.out.println(i--);}
+	        if (i == 8) {System.out.println(i--);}
+	        if (i == 7) {System.out.println(i--);}
+	        if (i == 6) {System.out.println(i--);}
+	        if (i == 5) {System.out.println(i--);}
+	        if (i == 4) {System.out.println(i--);}
+	        if (i == 3) {System.out.println(i--);}
+	        if (i == 2) {System.out.println(i--);}
+	        if (i == 1) {System.out.println(i--);}
+
+
+
+
+	}
+
+}
