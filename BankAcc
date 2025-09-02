@@ -1,0 +1,44 @@
+package dailytask;
+
+public class BankAccount {
+    // Private variables (encapsulation)
+    private String accountNumber;
+    private double balance;
+
+    // Constructor
+    public BankAccount(String accountNumber, double initialBalance) {
+        this.accountNumber = accountNumber;
+        this.balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount!");
+        }
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Insufficient balance or invalid amount!");
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+  
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("ACC12345", 1000);
+
+        account.deposit(500);
+        account.withdraw(200);
+        account.withdraw(2000); // Invalid withdrawal
+        System.out.println("Final Balance: " + account.getBalance());
+    }
+}
