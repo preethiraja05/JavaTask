@@ -1,0 +1,47 @@
+package dailytask;
+
+public class ClsStudent {
+    // Attributes
+    private int rollNumber;
+    private String name;
+    private int marks;
+    public void setRollNumber(int rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setMarks(int marks) {
+        if (marks >= 0) {
+            this.marks = marks;
+        } else {
+            System.out.println("Invalid Marks! Marks cannot be negative.");
+        }
+    }
+    public int getMarks() {
+        return marks;
+    }
+
+    public static void main(String[] args) {
+        ClsStudent student = new ClsStudent();
+
+        student.setRollNumber(101);
+        student.setName("Preethi");
+        student.setMarks(95);   // Valid
+        student.setMarks(-10);  // Invalid
+
+        System.out.println("Roll Number: " + student.getRollNumber());
+        System.out.println("Name: " + student.getName());
+        System.out.println("Marks: " + student.getMarks());
+    }
+}
