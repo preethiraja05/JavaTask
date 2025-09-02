@@ -1,0 +1,38 @@
+package dailytask;
+
+public class MobilePhone {
+    // attrbts
+    private String brand;
+    private double price;
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setPrice(double price) {
+        if (price > 1000) {
+            this.price = price;
+        } else {
+            System.out.println("Invalid price! Must be greater than 1000.");
+        }
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public static void main(String[] args) {
+        MobilePhone phone = new MobilePhone();
+
+        phone.setBrand("MicroMax");
+        phone.setPrice(21000);  // valid
+        phone.setPrice(100);    // invalid (less than 1000)
+
+        System.out.println("Mobile Brand: " + phone.getBrand());
+        System.out.println("Mobile Price: " + phone.getPrice());
+    }
+}
