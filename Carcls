@@ -1,0 +1,52 @@
+package dailytask;
+
+import java.time.Year;
+
+public class CarCls {
+    // attrbts
+    private String brand;
+    private String model;
+    private int year;
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setYear(int year) {
+        int currentYear = Year.now().getValue();
+        if (year <= currentYear) {
+            this.year = year;
+        } else {
+            System.out.println("Invalid year! Car year cannot be in the future.");
+        }
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public static void main(String[] args) {
+        CarCls car = new CarCls();
+
+        car.setBrand("Toyota");
+        car.setModel("Corolla");
+        car.setYear(2022);   // valid
+        car.setYear(2030);   // invalid (future year)
+
+        System.out.println("Car Brand: " + car.getBrand());
+        System.out.println("Car Model: " + car.getModel());
+        System.out.println("Car Year: " + car.getYear());
+    }
+}
