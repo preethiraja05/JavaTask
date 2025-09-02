@@ -1,0 +1,30 @@
+package dailytask;
+
+public class Circle {
+    // Property
+    double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Method to calculate area
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    // Method to calculate circumference
+    public double calculateCircumference() {
+        return 2 * Math.PI * radius;
+    }
+
+    // Main method to test
+    public static void main(String[] args) {
+        Circle circle = new Circle(5); // Example with radius = 7
+
+        System.out.println("Radius: " + circle.radius);
+        System.out.println("Area: " + circle.calculateArea());
+        System.out.println("Circumference: " + circle.calculateCircumference());
+    }
+}
